@@ -1,32 +1,33 @@
 # assistant_for_brain_master
+å¾®ä¿¡å¤´è„‘ç‹è€…è¾…åŠ©
 
-Î¢ĞÅÍ·ÄÔÍõÕß¸¨Öú
+#åŸºæœ¬åŸç†
+1.å®‰è£…mitmproxyæ‹¦æˆªç‰¹å®šçš„response<br>
 
-#»ù±¾Ô­Àí
-1.°²×°mitmproxyÀ¹½ØÌØ¶¨µÄresponse
+2.è·å–åˆ°è¿”å›çš„jsonæ•°æ®åè§£æï¼Œå¾—åˆ°é—®é¢˜å’Œé€‰é¡¹ï¼Œç„¶åå…ˆå–æ•°æ®åº“æŸ¥è¯¢æœ‰æ— è¿™ä¸ªé—®é¢˜ï¼Œæ²¡æœ‰å°±è‡ªåŠ¨å»ç™¾åº¦æŸ¥è¯¢ã€‚
 
-2.»ñÈ¡µ½·µ»ØµÄjsonÊı¾İºó½âÎö£¬µÃµ½ÎÊÌâºÍÑ¡Ïî£¬È»ºóÏÈÈ¡Êı¾İ¿â²éÑ¯ÓĞÎŞÕâ¸öÎÊÌâ£¬Ã»ÓĞ¾Í×Ô¶¯È¥°Ù¶È²éÑ¯¡£
+3.æ”¹å†™responseé‡Œçš„jsonæ•°æ®ï¼Œåœ¨é€‰é¡¹åé¢åŠ ä¸Šå¤‡æ³¨ï¼Œæ•°æ®åº“æœ‰çš„é—®é¢˜ï¼Œåœ¨æ­£ç¡®é€‰é¡¹ååŠ [right]ï¼Œ<br>
+    æ•°æ®åº“æ²¡æœ‰çš„æŠŠç™¾åº¦æœç´¢çš„ç»“æœç»Ÿè®¡é€‰é¡¹å‡ºç°çš„æ¬¡æ•°å¹¶æ ‡æ³¨åœ¨é€‰é¡¹åé¢
 
-3.¸ÄĞ´responseÀïµÄjsonÊı¾İ£¬ÔÚÑ¡ÏîºóÃæ¼ÓÉÏ±¸×¢£¬Êı¾İ¿âÓĞµÄÎÊÌâ£¬ÔÚÕıÈ·Ñ¡Ïîºó¼Ó[right]£¬
-    Êı¾İ¿âÃ»ÓĞµÄ°Ñ°Ù¶ÈËÑË÷µÄ½á¹ûÍ³¼ÆÑ¡Ïî³öÏÖµÄ´ÎÊı²¢±ê×¢ÔÚÑ¡ÏîºóÃæ
-    
-#²Ù×÷²½Öè
-1.°²×°mitmproxy
+#æ“ä½œæ­¥éª¤
+1.å®‰è£…mitmproxy<br>
+~~~
     pip install mitmproxy
+~~~
 ![step0][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step0.png]
-2.ÉèÖÃ´úÀí
+2.è®¾ç½®ä»£ç†<br>
 ![step1][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step1.png]
 ![step2][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step2.png]
 ![step3][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step3.png]
-3.ÃüÁîĞĞÔËĞĞ½Å±¾
-![step4][https://github.com/saury2013/assistant_for_brain_master.gitt/imgs/step4.png]
-4.°²×°Ö¤Êé£¬ÔÚÊÖ»úä¯ÀÀÆ÷ÊäÈëmitm.it
+3.å‘½ä»¤è¡Œè¿è¡Œè„šæœ¬<br>
+![step4][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step4.png]
+4.å®‰è£…è¯ä¹¦ï¼Œåœ¨æ‰‹æœºæµè§ˆå™¨è¾“å…¥mitm.it<br>
 ![step5][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step5.png]
 ![step6][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step6.png]
 ![step7][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step7.png]
-5.ĞÅÈÎÖ¤Êé£¬IOSÏµÍ³ÏÂÒ»¶¨Òª×¢ÒâÕâ¸ö²½Öè
+5.ä¿¡ä»»è¯ä¹¦ï¼ŒIOSç³»ç»Ÿä¸‹ä¸€å®šè¦æ³¨æ„è¿™ä¸ªæ­¥éª¤<br>
 ![step8][https://github.com/saury2013/assistant_for_brain_master.git/imgs/step8.png]
 ***
-ÑİÊ¾Ğ§¹û
+æ¼”ç¤ºæ•ˆæœ<br>
 ![show][https://github.com/saury2013/assistant_for_brain_master.git/imgs/show.png]
 ![show2][https://github.com/saury2013/assistant_for_brain_master.git/imgs/show2.png]
