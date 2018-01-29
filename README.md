@@ -14,20 +14,21 @@
 ~~~
     pip install mitmproxy
 ~~~
-![step0][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step0.png]
+![step0][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step0.png]<br>
 2.设置代理<br>
-![step1][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step1.png]
-![step2][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step2.png]
-![step3][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step3.png]
+![step1][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step1.png]<br>
+![step2][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step2.png]<br>
+![step3][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step3.png]<br>
 3.命令行运行脚本<br>
-![step4][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step4.png]
+![step4][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step4.png]<br>
 4.安装证书，在手机浏览器输入mitm.it<br>
-![step5][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step5.png]
-![step6][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step6.png]
-![step7][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step7.png]
+![step5][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step5.png]<br>
+![step6][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step6.png]<br>
+![step7][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step7.png]<br>
 5.信任证书，IOS系统下一定要注意这个步骤<br>
-![step8][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step8.png]
+![step8][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/step8.png]<br>
 ***
 演示效果<br>
-![show][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/show.png]
-![show2][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/show2.png]
+![show][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/show.png]<br>
+![show2][https://github.com/saury2013/assistant_for_brain_master/blob/master/imgs/show2.png]<br>
+<img src="./imgs/show.png">
