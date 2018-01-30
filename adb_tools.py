@@ -2,6 +2,7 @@
 __author__ = 'Allen'
 
 import os
+from mitmproxy import ctx
 
 setting = {
     "start":{
@@ -32,4 +33,6 @@ setting = {
 
 def auto_click(position):
     _shell = "adb shell input tap {0} {1}"
-    os.popen(_shell.format(setting[position]['dX'],setting[position]['dX']))
+    cmd = _shell.format(setting[position]['dX'], setting[position]['dY'])
+    ctx.log.info('adb_cmd : %s' % (cmd))
+    os.popen(cmd)

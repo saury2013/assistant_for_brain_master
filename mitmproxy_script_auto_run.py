@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Allen'
 
-import json
+import json,os
 from mitmproxy import ctx
 from urllib.parse import quote
 import string
@@ -12,6 +12,8 @@ from adb_tools import auto_click
 
 _question = ''
 _options = []
+
+
 
 def response(flow):
     path = flow.request.path
@@ -25,7 +27,10 @@ def response(flow):
         _options = options.copy()
         ctx.log.info('question : %s, options : %s'%(question, options))
         option_position = get_answer(question, options)
-        auto_click(option_position)
+        ctx.log.info('qoption_position : %s' % (option_position))
+        url_str = "http://localhost:5050/?option={0}".format(option_position)
+        requests.get(url=url_str)
+        # auto_click(option_position)
         # flow.response.text = json.dumps(data)
     elif path == '/question/bat/choose':
         data = json.loads(flow.response.text)
@@ -36,7 +41,8 @@ def response(flow):
     elif path == '/question/bat/fightResult':
         import time
         time.sleep(1)
-        auto_click("continue")
+        url_str = "http://localhost:5050/?option=continue"
+        requests.get(url=url_str)
 
 def get_answer(question, options):
     db_result = get_answer_from_db(question)
@@ -46,7 +52,7 @@ def get_answer(question, options):
         answer = []
         for i in range(len(options)):
             if db_result == options[i]:
-                return "option"+i
+                return "option"+str(i)
     else:
         ctx.log.info("no answer in database,then we search from baidu...")
         answer = search_from_net(question, options)
@@ -68,8 +74,8 @@ def search_from_net(question, options):
     min_index = answer_count.index(min(answer_count))
     max_index = answer_count.index(max(answer_count))
     if '不' in question:
-        return "option"+min_index
-    return "option"+max_index
+        return "option"+str(min_index)
+    return "option"+str(max_index)
 
 
 def adb_shell_choose():

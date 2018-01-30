@@ -4,6 +4,7 @@ __author__ = 'Allen'
 from urllib.parse import quote
 import string
 import requests
+import os
 
 
 request_json = {
@@ -55,3 +56,31 @@ c = [-10,-5,0,5,3,10,15,-20,25]
 
 print (c.index(min(c)))  # 返回最小值
 print (c.index(max(c))) # 返回最大值
+
+setting = {
+    "start":{
+        "dX":358,
+        "dY":1200
+    },
+    "continue":{
+        "dX":358,
+        "dY":944
+    },
+    "option0":{
+        "dX":324,
+        "dY":721
+    },
+    "option1":{
+        "dX":324,
+        "dY":841
+    },
+    "option2":{
+        "dX":324,
+        "dY":963
+    },
+    "option3":{
+        "dX":324,
+        "dY":1090
+    },
+}
+os.popen("adb shell input tap {0} {1}".format(setting["start"]["dX"],setting["start"]["dY"]))
