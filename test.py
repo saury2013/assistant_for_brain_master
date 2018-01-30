@@ -30,23 +30,28 @@ request_json = {
 # answer_option = request_json['data']['num']
 # answer = options[int(answer_option)-1]
 # print(answer)
+#
+# def cat_test(path):
+#     _question = ''
+#     _options = []
+#     if path == 1:
+#         question = request_json['data']['quiz']
+#         options = request_json['data']['options']
+#         _question = question
+#         _options = options.copy()
+#         print(_options)
+#
+#
+#     elif path == 2:
+#
+#         answer_option = request_json['data']['num']
+#
+#         answer = _options[int(answer_option)-1]
+#         print(answer)
+#
+# cat_test(1)
 
-def cat_test(path):
-    _question = ''
-    _options = []
-    if path == 1:
-        question = request_json['data']['quiz']
-        options = request_json['data']['options']
-        _question = question
-        _options = options.copy()
-        print(_options)
+c = [-10,-5,0,5,3,10,15,-20,25]
 
-
-    elif path == 2:
-
-        answer_option = request_json['data']['num']
-
-        answer = _options[int(answer_option)-1]
-        print(answer)
-
-cat_test(1)
+print (c.index(min(c)))  # 返回最小值
+print (c.index(max(c))) # 返回最大值

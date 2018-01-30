@@ -7,6 +7,7 @@ from urllib.parse import quote
 import string
 import requests
 from db_repository import get_answer_from_db,insert_question
+from adb_tools import auto_click
 
 
 _question = ''
@@ -23,15 +24,19 @@ def response(flow):
         _question = question
         _options = options.copy()
         ctx.log.info('question : %s, options : %s'%(question, options))
-        fixed_options = get_answer(question, options)
-        data['data']['options'] = fixed_options
-        flow.response.text = json.dumps(data)
+        option_position = get_answer(question, options)
+        auto_click(option_position)
+        # flow.response.text = json.dumps(data)
     elif path == '/question/bat/choose':
         data = json.loads(flow.response.text)
         answer_option = data['data']['answer']
         answer = _options[int(answer_option)-1]
         ctx.log.info('answer_option : %s, answer : %s' % (answer_option, answer))
         insert_question(_question,answer)
+    elif path == '/question/bat/fightResult':
+        import time
+        time.sleep(1)
+        auto_click("continue")
 
 def get_answer(question, options):
     db_result = get_answer_from_db(question)
@@ -39,11 +44,9 @@ def get_answer(question, options):
     if  db_result != None:
         ctx.log.info("bingo!there is an answer in database.")
         answer = []
-        for option in options:
-            if db_result == option:
-                answer.append(option+'[right]')
-            else:
-                answer.append(option)
+        for i in range(len(options)):
+            if db_result == options[i]:
+                return "option"+i
     else:
         ctx.log.info("no answer in database,then we search from baidu...")
         answer = search_from_net(question, options)
@@ -56,12 +59,18 @@ def search_from_net(question, options):
     headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"}
     
     content = requests.get(url, headers=headers).text
-    answer = []
+    answer_count = []
     for option in options:
         count = content.count(option)
         ctx.log.info('option : %s, count : %s'%(option, count))
-        answer.append(option + ' [' + str(count) + ']')
-    return answer
+        answer_count.append(count)
+
+    min_index = answer_count.index(min(answer_count))
+    max_index = answer_count.index(max(answer_count))
+    if '不' in question:
+        return "option"+min_index
+    return "option"+max_index
+
 
 def adb_shell_choose():
     pass
