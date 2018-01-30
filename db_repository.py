@@ -9,10 +9,10 @@ def get_answer_from_db(question):
     conn = sqlite3.connect("brain_mster_questions.db")
     result = None
     cursor = conn.cursor()
-    sql_cmd = "SELECT QUESTION,ANSWER FROM BM_QUESTIONS WHERE QUESTION = ?"
+    sql_cmd = "SELECT ANSWER FROM BM_QUESTIONS WHERE QUESTION = ?"
     try:
         cursor.execute(sql_cmd,(question,))
-        result = cursor.fetchone()
+        result = cursor.fetchone()[0]
         print(result)
     except Exception as e:
         print(e,"get_answer_from_db error")
@@ -36,5 +36,5 @@ def insert_question(question,answer):
         conn.close()
 
 
-# get_answer_from_db("我是谁?")
+# get_answer_from_db("「侬」的意思是？")
 # insert_question("中国的首都是什么地方?","beijing")

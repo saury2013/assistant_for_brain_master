@@ -49,7 +49,6 @@ def get_answer(question, options):
     ctx.log.info("db_result:%s" %(db_result))
     if  db_result != None:
         ctx.log.info("bingo!there is an answer in database.")
-        answer = []
         for i in range(len(options)):
             if db_result == options[i]:
                 return "option"+str(i)
